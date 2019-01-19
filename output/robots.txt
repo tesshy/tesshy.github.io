@@ -1,0 +1,4 @@
+Sitemap: https://www.tesshy.com/sitemapindex.xml
+
+User-Agent: *
+Host: www.tesshy.com
