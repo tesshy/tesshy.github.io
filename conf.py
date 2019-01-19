@@ -17,7 +17,7 @@ import time
 
 # Data about this site
 BLOG_AUTHOR = "Tetsushi Watanabe"  # (translatable)
-BLOG_TITLE = "blog::tesshy"  # (translatable)
+BLOG_TITLE = "www::tesshy"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link. Don't forget the protocol (http/https)!
 SITE_URL = "https://www.tesshy.com/"
@@ -25,7 +25,7 @@ SITE_URL = "https://www.tesshy.com/"
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://www.tesshy.com/"
 BLOG_EMAIL = "tesshy@tesshy.com"
-BLOG_DESCRIPTION = "tesshy's Blog."  # (translatable)
+BLOG_DESCRIPTION = "tesshy's Pages."  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -136,9 +136,10 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "文書一覧"),
+        ("/pages/profile", "プロフィール"),
+        ("/archive.html", "記事一覧"),
         ("/categories/", "タグ"),
-        ("/rss.xml", "RSSフィード"),
+        ("/rss.xml", "RSS"),
     ),
 }
 
@@ -150,7 +151,7 @@ NAVIGATION_ALT_LINKS = {
 }
 
 # Name of the theme to use.
-THEME = "bootstrap4"
+THEME = "bootblog4"
 
 # Primary color of your theme. This will be used to customize your theme.
 # Must be a HEX value.

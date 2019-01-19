@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.tesshy.com/</loc>
-  <lastmod>2019-01-19T18:05:00Z</lastmod>
+  <lastmod>2019-01-19T18:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tesshy.com/2018/</loc>
@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://www.tesshy.com/archive.html</loc>
-  <lastmod>2019-01-19T18:05:00Z</lastmod>
+  <lastmod>2019-01-19T18:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tesshy.com/categories/</loc>
@@ -40,6 +40,10 @@
  <url>
   <loc>https://www.tesshy.com/listings/</loc>
   <lastmod>2019-01-19T18:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tesshy.com/pages/profile/</loc>
+  <lastmod>2019-01-19T18:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tesshy.com/posts/campingcar/build/2018-07-22/</loc>
