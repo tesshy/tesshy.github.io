@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html prefix="        og: http://ogp.me/ns# article: http://ogp.me/ns/article#     " vocab="http://ogp.me/ns" lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>ロリポップの独自SSLを外部ネームサーバーで使用する方法 | www::tesshy</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/custom.css" rel="stylesheet" type="text/css">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="ja" href="../../../rss.xml">
+<link rel="canonical" href="https://www.tesshy.com/posts/diary/Lollipop_SSL/">
+<!--[if lt IE 9]><script src="../../../assets/js/html5shiv-printshiv.min.js"></script><![endif]--><script defer async="" src="//www.instagram.com/embed.js" id="instagram-embed-script"></script><meta name="author" content="Tetsushi Watanabe">
+<link rel="prev" href="../2018-12-26/" title="2018-12-26::ANAの機内WiFiポータルを覗き見る" type="text/html">
+<meta property="og:site_name" content="www::tesshy">
+<meta property="og:title" content="ロリポップの独自SSLを外部ネームサーバーで使用する方法">
+<meta property="og:url" content="https://www.tesshy.com/posts/diary/Lollipop_SSL/">
+<meta property="og:description" content="これがわからんかった、ロリポップサーバーで独自SSL証明書使う方法。
+公式ドキュメントは以下のように記載がある。
+
+・他社ドメイン管理サービスで管理されている独自ドメインは、ネームサーバー情報として下記をご設定ください。
+　uns01.lolipop.jp
+　uns02.lolipop.jp
+
+https://lolipop.jp/support/faq/ssl/000797/
+んなアホな、レコー">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-01-29T15:03:29+09:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@tesshy">
+</head>
+<body>
+    <a href="#content" class="sr-only sr-only-focusable">本文を読み飛ばす</a>
+    <div id="container">
+         
+    <header id="header"><h1 id="brand"><a href="https://www.tesshy.com/" title="www::tesshy" rel="home">
+
+        <span id="blog-title">www::tesshy</span>
+    </a></h1>
+
+        
+
+        
+    <nav id="menu"><ul>
+<li><a href="../../../pages/profile">プロフィール</a></li>
+                <li><a href="../../../archive.html">記事一覧</a></li>
+                <li><a href="../../../categories/">タグ</a></li>
+                <li><a href="../../../rss.xml">RSS</a></li>
+
+    
+
+    
+    
+    </ul></nav></header><main id="content"><article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">ロリポップの独自SSLを外部ネームサーバーで使用する方法</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                    Tetsushi Watanabe
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2019-01-29T15:03:29+09:00" itemprop="datePublished" title="2019-01-29 15:03">2019-01-29 15:03</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.ipynb" class="sourcelink">ソース</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>これがわからんかった、ロリポップサーバーで独自SSL証明書使う方法。</p>
+<p>公式ドキュメントは以下のように記載がある。</p>
+
+<pre><code>・他社ドメイン管理サービスで管理されている独自ドメインは、ネームサーバー情報として下記をご設定ください。
+　uns01.lolipop.jp
+　uns02.lolipop.jp
+
+https://lolipop.jp/support/faq/ssl/000797/</code></pre>
+<p>んなアホな、レコード設定もできないNS（ネームサーバー）向けろとか無理やろ。。。と思って、最初の設定の時だけ　uns01.lolipop.jp 　uns02.lolipop.jp をNSに設定して、独自SSL設定できたら本来使いたいNSに戻すというのをしてたんだが、これだとLet's Encryptの有効期限（多分三ヶ月）過ぎると証明書自動更新できなくて死ぬ（SSL証明書検証エラーになる）。</p>
+<p>だが、どうもロリポのNS使ってないサーバーでも更新できているサーバーがいる。この違いはなんだ・・・と思って調べたら、どうも@に対してAレコードでロリポのサーバー向ければいいっぽい。（サブドメインじゃなくて、ドメインに対してのAレコードをロリポのサーバーにする）</p>
+<p>具体的にはこんな感じ。</p>
+
+<pre><code>tesshy.com.     3599    IN  A   157.7.107.129</code></pre>
+<p>これで自動更新までできることを確認。めでたしめでたし。（どうもサポート外の使い方っぽいのでご利用は計画的に・・・）</p>
+
+</div>
+</div>
+</div>
+ 
+
+
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../2018-12-26/" rel="prev" title="2018-12-26::ANAの機内WiFiポータルを覗き見る">一つ前の文書</a>
+            </li>
+        </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
+        </script></article></main><footer id="footer"><p>Contents © 2019         <a href="mailto:tesshy@tesshy.com">Tetsushi Watanabe</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    
+            <script src="../../../assets/js/all-nocdn.js"></script><!-- Social buttons --><div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+<a class="addthis_button_more">Share</a>
+<ul>
+<li>
+<a class="addthis_button_facebook"></a>
+</li>
+<li>
+<a class="addthis_button_google_plusone_share"></a>
+</li>
+<li>
+<a class="addthis_button_linkedin"></a>
+</li>
+<li>
+<a class="addthis_button_twitter"></a>
+</li>
+</ul>
+</div>
+<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script><!-- End of social buttons --><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-20466639-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-20466639-1');
+</script>
+</body>
+</html>

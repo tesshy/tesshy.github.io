@@ -7,15 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://www.tesshy.com/</loc>
-  <lastmod>2019-01-20T01:36:00Z</lastmod>
+  <lastmod>2019-01-29T06:23:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tesshy.com/2018/</loc>
   <lastmod>2019-01-20T01:36:00Z</lastmod>
  </url>
  <url>
+  <loc>https://www.tesshy.com/2019/</loc>
+  <lastmod>2019-01-29T06:23:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://www.tesshy.com/archive.html</loc>
-  <lastmod>2019-01-20T01:36:00Z</lastmod>
+  <lastmod>2019-01-29T06:23:00Z</lastmod>
  </url>
  <url>
   <loc>https://www.tesshy.com/categories/</loc>
@@ -76,5 +80,9 @@
  <url>
   <loc>https://www.tesshy.com/posts/diary/2018-12-26/</loc>
   <lastmod>2019-01-20T01:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://www.tesshy.com/posts/diary/Lollipop_SSL/</loc>
+  <lastmod>2019-01-29T06:23:00Z</lastmod>
  </url>
 </urlset>

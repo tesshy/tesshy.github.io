@@ -13,7 +13,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="ja" href="rss.xml">
 <link rel="canonical" href="https://www.tesshy.com/">
-<!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><script defer async="" src="//www.instagram.com/embed.js" id="instagram-embed-script"></script><link rel="prefetch" href="posts/diary/2018-12-26/" type="text/html">
+<!--[if lt IE 9]><script src="assets/js/html5shiv-printshiv.min.js"></script><![endif]--><script defer async="" src="//www.instagram.com/embed.js" id="instagram-embed-script"></script><link rel="prefetch" href="posts/diary/Lollipop_SSL/" type="text/html">
 </head>
 <body>
     <a href="#content" class="sr-only sr-only-focusable">本文を読み飛ばす</a>
@@ -38,7 +38,45 @@
     
     
     </ul></nav></header><main id="content"><div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/diary/2018-12-26/" class="u-url">2018-12-26::ANAの機内WiFiポータルを覗き見る</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/diary/Lollipop_SSL/" class="u-url">ロリポップの独自SSLを外部ネームサーバーで使用する方法</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Tetsushi Watanabe
+            </span></p>
+            <p class="dateline">
+            <a href="posts/diary/Lollipop_SSL/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-01-29T15:03:29+09:00" itemprop="datePublished" title="2019-01-29 15:03">2019-01-29 15:03</time></a>
+            </p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>これがわからんかった、ロリポップサーバーで独自SSL証明書使う方法。</p>
+<p>公式ドキュメントは以下のように記載がある。</p>
+
+<pre><code>・他社ドメイン管理サービスで管理されている独自ドメインは、ネームサーバー情報として下記をご設定ください。
+　uns01.lolipop.jp
+　uns02.lolipop.jp
+
+https://lolipop.jp/support/faq/ssl/000797/</code></pre>
+<p>んなアホな、レコード設定もできないNS（ネームサーバー）向けろとか無理やろ。。。と思って、最初の設定の時だけ　uns01.lolipop.jp 　uns02.lolipop.jp をNSに設定して、独自SSL設定できたら本来使いたいNSに戻すというのをしてたんだが、これだとLet's Encryptの有効期限（多分三ヶ月）過ぎると証明書自動更新できなくて死ぬ（SSL証明書検証エラーになる）。</p>
+<p>だが、どうもロリポのNS使ってないサーバーでも更新できているサーバーがいる。この違いはなんだ・・・と思って調べたら、どうも@に対してAレコードでロリポのサーバー向ければいいっぽい。（サブドメインじゃなくて、ドメインに対してのAレコードをロリポのサーバーにする）</p>
+<p>具体的にはこんな感じ。</p>
+
+<pre><code>tesshy.com.     3599    IN  A   157.7.107.129</code></pre>
+<p>これで自動更新までできることを確認。めでたしめでたし。（どうもサポート外の使い方っぽいのでご利用は計画的に・・・）</p>
+
+</div>
+</div>
+</div>
+ 
+
+
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/diary/2018-12-26/" class="u-url">2018-12-26::ANAの機内WiFiポータルを覗き見る</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Tetsushi Watanabe

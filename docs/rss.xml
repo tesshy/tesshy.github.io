@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>www::tesshy</title><link>https://www.tesshy.com/</link><description>tesshy's Pages.</description><atom:link href="https://www.tesshy.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>ja</language><copyright>Contents © 2019 &lt;a href="mailto:tesshy@tesshy.com"&gt;Tetsushi Watanabe&lt;/a&gt; </copyright><lastBuildDate>Sun, 20 Jan 2019 01:36:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>2018-12-26::ANAの機内WiFiポータルを覗き見る</title><link>https://www.tesshy.com/posts/diary/2018-12-26/</link><dc:creator>Tetsushi Watanabe</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>www::tesshy</title><link>https://www.tesshy.com/</link><description>tesshy's Pages.</description><atom:link href="https://www.tesshy.com/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>ja</language><copyright>Contents © 2019 &lt;a href="mailto:tesshy@tesshy.com"&gt;Tetsushi Watanabe&lt;/a&gt; </copyright><lastBuildDate>Tue, 29 Jan 2019 06:23:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ロリポップの独自SSLを外部ネームサーバーで使用する方法</title><link>https://www.tesshy.com/posts/diary/Lollipop_SSL/</link><dc:creator>Tetsushi Watanabe</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;これがわからんかった、ロリポップサーバーで独自SSL証明書使う方法。&lt;/p&gt;
+&lt;p&gt;公式ドキュメントは以下のように記載がある。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;・他社ドメイン管理サービスで管理されている独自ドメインは、ネームサーバー情報として下記をご設定ください。
+　uns01.lolipop.jp
+　uns02.lolipop.jp
+
+https://lolipop.jp/support/faq/ssl/000797/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;んなアホな、レコード設定もできないNS（ネームサーバー）向けろとか無理やろ。。。と思って、最初の設定の時だけ　uns01.lolipop.jp 　uns02.lolipop.jp をNSに設定して、独自SSL設定できたら本来使いたいNSに戻すというのをしてたんだが、これだとLet's Encryptの有効期限（多分三ヶ月）過ぎると証明書自動更新できなくて死ぬ（SSL証明書検証エラーになる）。&lt;/p&gt;
+&lt;p&gt;だが、どうもロリポのNS使ってないサーバーでも更新できているサーバーがいる。この違いはなんだ・・・と思って調べたら、どうも@に対してAレコードでロリポのサーバー向ければいいっぽい。（サブドメインじゃなくて、ドメインに対してのAレコードをロリポのサーバーにする）&lt;/p&gt;
+&lt;p&gt;具体的にはこんな感じ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tesshy.com.     3599    IN  A   157.7.107.129&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;これで自動更新までできることを確認。めでたしめでたし。（どうもサポート外の使い方っぽいのでご利用は計画的に・・・）&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+ 
+
+</description><guid>https://www.tesshy.com/posts/diary/Lollipop_SSL/</guid><pubDate>Tue, 29 Jan 2019 06:03:29 GMT</pubDate></item><item><title>2018-12-26::ANAの機内WiFiポータルを覗き見る</title><link>https://www.tesshy.com/posts/diary/2018-12-26/</link><dc:creator>Tetsushi Watanabe</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
