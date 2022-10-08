@@ -1202,21 +1202,21 @@ SOCIAL_BUTTONS_CODE = """
 # (translatable)
 EXTRA_HEAD_DATA = """
 <script defer="" async="" src="//www.instagram.com/embed.js" id="instagram-embed-script"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6MV2BD0PZ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6MV2BD0PZ3');
+</script>
 """
 
 # Google Analytics or whatever else you use. Added to the bottom of <body>
 # in the default template (base.tmpl).
 # (translatable)
 BODY_END = """
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-20466639-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-20466639-1');
-</script>
 """
 
 # The possibility to extract metadata from the filename by using a
