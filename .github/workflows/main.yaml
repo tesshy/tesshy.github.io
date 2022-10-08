@@ -1,5 +1,7 @@
-on: [push]
-
+on: 
+  push:
+    branches:
+      - master
 jobs:
   nikola_build:
     runs-on: ubuntu-latest
