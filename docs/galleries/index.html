@@ -69,7 +69,7 @@
       <div class="mdc-layout-grid__inner">
         <div class="mdc-layout-grid__cell">
           
-        <footer id="footer"><p>Contents © 2019         <a href="mailto:tesshy@tesshy.com">Tetsushi Watanabe</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+        <footer id="footer"><p>Contents © 2022         <a href="mailto:tesshy@tesshy.com">Tetsushi Watanabe</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>
@@ -97,7 +97,7 @@
 var jsonContent = [];
 var thumbnailSize = 180;
 renderGallery(jsonContent, thumbnailSize);
-window.addEventListener('resize', renderGallery);
+window.addEventListener('resize', function(){renderGallery(jsonContent, thumbnailSize)});
 </script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
