@@ -1211,6 +1211,7 @@ EXTRA_HEAD_DATA = """
 
   gtag('config', 'G-6MV2BD0PZ3');
 </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2607876792762904" crossorigin="anonymous"></script>
 """
 
 # Google Analytics or whatever else you use. Added to the bottom of <body>
