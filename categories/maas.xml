@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tesshy::tesshy (MaaSについての記事)</title><link>https://www.tesshy.com/</link><description></description><atom:link href="https://www.tesshy.com/categories/maas.xml" rel="self" type="application/rss+xml"></atom:link><language>ja</language><copyright>Contents © 2022 &lt;a href="mailto:tesshy@tesshy.com"&gt;Tetsushi Watanabe&lt;/a&gt; </copyright><lastBuildDate>Sun, 09 Oct 2022 06:14:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>MaaSの定義とは何なのか？</title><link>https://www.tesshy.com/posts/essay/what-is-the-definition-of-the-maas/</link><dc:creator>Tetsushi Watanabe</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;昨年末あたりから、MaaS(Mobility as a Service)という単語がしきりに聞かれるようになってきた。しかし某が認識していたMaaSの定義とはかけ離れた用いられかたをした例を見かけ、そもそもMaaSの定義とは何なのか、さらにはスマートシティというコンテクストとマッチするのかとても疑問に思えてきたので、ここで一度整理して見直しを行いたいと思った所存。&lt;/p&gt;
+&lt;h2 id="MaaS%E3%81%AE%E5%AE%9A%E7%BE%A9"&gt;MaaSの定義&lt;a class="anchor-link" href="https://www.tesshy.com/posts/essay/what-is-the-definition-of-the-maas/#MaaS%E3%81%AE%E5%AE%9A%E7%BE%A9"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;MaaSという単語の定義としてよく用いられるのは、The 1st International Conference on Mobility as a Service (ICoMaaS) にて提唱された以下のものである。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mobility as a Service (MaaS) is the integration of various forms of transport services into a single mobility service accessible on demand. 
+Mobility as a Service （MaaS）は、オンデマンドでアクセス可能な一つのモビリティサービスとして、様々な輸送形態のサービスを統合したものです。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;To meet a customer’s request, a MaaS operator  facilitates a diverse menu of transport options, be they public transport, ride-, car- or bike-sharing, taxi or car rental/lease, or a combination thereof. 
+顧客の要求を満たすために、MaaSオペレータは公共の交通機関、乗車、自動車、自転車の共有、タクシーまたはレンタカー/リース、またはそれらの組み合わせなど、さまざまな交通手段のメニューを用意しています。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For the user, MaaS can offer added value through use of a single application to provide access to mobility, with a single payment channel instead of multiple ticketing and payment operations. 
+ユーザーに対して、MaaSは複数の発券および支払い操作の代わりに、単一のアプリケーションを使用して、単一の支払いチャネルでモビリティへのアクセスを提供することによって付加価値を提供できます。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For its users, MaaS should be the best value proposition, by helping them meet their mobility needs and solve the inconvenient parts of individual journeys as well as the entire system of mobility services.
+そのユーザーにとって、MaaSはモビリティサービスの完全なシステムとして、彼らのモビリティニーズを満たし、個々の旅の不便な部分を解決するのを手助けすることで、最高の価値提案がなされるでしょう。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://maas-alliance.eu/homepage/what-is-maas/"&gt;https://maas-alliance.eu/homepage/what-is-maas/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;要は色々な輸送サービスを一つのサービスに統合します、予約・決済も完結しますよ、今までの不便が解消されるので最高でしょ、という意味で解釈している。&lt;/p&gt;
+&lt;p&gt;一方、MaaSという言葉を最初に用いたフィンランドMaaSGlobal社では以下のように記述している。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Mobility as a Service brings every kind of transport together into a single intuitive mobile app.
+Mobility as a Serviceは、あらゆる種類の輸送を1つの直感的なモバイルアプリにまとめたものをもたらします。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;このbringsの解釈が英語嫌いマンな某には難解で「アプリです」or「アプリをもたらします」なのがで解釈が若干異なる、が、要は複数輸送サービスを一つにまとめるアプリです、と言っている。&lt;/p&gt;
+&lt;p&gt;この二つだけでも何とも言えない差異が感じられるが、もう一つ厄介なのがMaaS Levelというものが定義(Jana, et al. ”A Topological Approach to Mobiity as a Service”,　ICoMaaS 2017 Proceedings pp.187-201)され、ここで「Integration Social Goal」というのが新たに出現したことによりスマートシティーにおける立ち位置を明確化しようという流れがある。現状、日本政府内でも共有されている概念である。先のICoMaaSにおける定義をベースとして考えた場合でも、MaaSはスマートシティにおける重要なコンポーネントであることは疑いようがないが、都市計画などをGoalとするレベル定義は従来のMaaSにおけるスコープ外のことであるためいただけないと個人的には感じている。スマートシティを実現するための手段がMaaSであるならば、そこに目的である都市計画、政策を盛り込むな、という話である。&lt;/p&gt;
+&lt;p&gt;・・・と思ってよく論文読んでみたら、論文にこんなこと書いてあった。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;note that one level is not necessarily ‘better’ than another, as it depends on the customer and his or her needs. 
+あるレベルが他のレベルよりも必ずしも「良い」とは限らないことに注意してください。これは、顧客とそのニーズによって異なります。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;この場合、変に階層構造でレベルを振ってしまったのが良くなくて、ある意味でここでのレベルはMaaSを形作るコンポーネントであると捉えるべきである。（Paymentに関して言えば日本におけるSuicaはシングルペイメント手段としてある意味で完成しているにも関わらず、このレベル分類だとランクインすらしないと思われるなど、諸々問題点があると言わざるを得ない。）&lt;/p&gt;
+&lt;p&gt;何が言いたいか自分でも良くわからなくなってきたが、箇条書きにすると、&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;レベル関係なしにMaaSは実現される&lt;/li&gt;
+&lt;li&gt;MaaSはスマートシティ構想の一部を実現する手段&lt;/li&gt;
+&lt;li&gt;手段に目的混ぜるな&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ということである。&lt;/p&gt;
+&lt;h2 id="X-as-a-Service%E3%81%AE%E5%AE%9A%E7%BE%A9"&gt;X as a Serviceの定義&lt;a class="anchor-link" href="https://www.tesshy.com/posts/essay/what-is-the-definition-of-the-maas/#X-as-a-Service%E3%81%AE%E5%AE%9A%E7%BE%A9"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;SaaSとかIaaSとか言われるが、IT業界ではこれらをひっくるめてXaaSと呼ばれるそうである。（単語としては知っているが実際に使った現場に遭遇したことはない・・・）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;XaaSを利用することで、従来は製品の購入・システムの構築・インフラの敷設などを必要とした高コストのコンピューティング資源を、インターネットを通じて必要な分のみ利用することができる。今日では、XaaSの概念は「クラウドコンピューティング」として扱われることも多い。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://www.weblio.jp/content/XaaS"&gt;https://www.weblio.jp/content/XaaS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;よく言われるas a Serviceとは、ライセンスが買い切りモデルからサブスクリプションモデルになった、というのが特徴であると某は考える（要出典）。昨今のMaaS界隈では、自動車が所有からシェアリングへ、要は買い切りからサブスクリプションに変化すると言われる。これならas a Serviceというのはagreeである。&lt;/p&gt;
+&lt;p&gt;ただ、鉄道やバス、タクシーにおいては従来よりサブスクリプションモデルである。これが非常に引っかかっており、某がMaaSという単語をあまり使いたくない理由である。同じ考えかどうかはわからないが、アメリカにおいてはMaaSという単語がほとんど見受けられない。その代わりMultimodal Trip Planなどという言い方は良く見かける。&lt;/p&gt;
+&lt;p&gt;MaaSとは本当にXaaSなのか。正直バズワード感が現状強いため、使い方には気をつけたいと強く思う。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description><category>Essey</category><category>MaaS</category><guid>https://www.tesshy.com/posts/essay/what-is-the-definition-of-the-maas/</guid><pubDate>Mon, 11 Mar 2019 00:43:41 GMT</pubDate></item></channel></rss>
