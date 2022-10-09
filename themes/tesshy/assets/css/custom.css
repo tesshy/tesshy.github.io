@@ -1,10 +1,15 @@
-#header {
+/* /* #header {
   width: 100%;
-}
+} */
 
 #container {
   margin: 1em auto;
   max-width: 1024px;
+} 
+
+body {
+  /* height: 100dvh; */
+  /* width: 100dvw; */
 }
 
 div.prompt {

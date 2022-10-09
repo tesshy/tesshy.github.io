@@ -1,58 +1,40 @@
-## -*- coding: utf-8 -*-
-<%namespace name="base" file="base_helper.tmpl" import="*"/>
-<%namespace name="header" file="base_header.tmpl" import="*"/>
-<%namespace name="footer" file="base_footer.tmpl" import="*"/>
-${set_locale(lang)}
-### <html> tag is included by base.html_headstart
-${base.html_headstart()}
-<%block name="extra_head">
-### Leave this block alone.
-</%block>
-${template_hooks['extra_head']()}
+{#  -*- coding: utf-8 -*- #}
+{% import 'base_helper.tmpl' as base with context %}
+{% import 'base_header.tmpl' as header with context %}
+{% import 'base_footer.tmpl' as footer with context %}
+{{ set_locale(lang) }}
+{#  <html> tag is included by base.html_headstart #}
+{{ base.html_headstart() }}
+{% block extra_head %}
+{#  Leave this block alone. #}
+{% endblock %}
+{{ template_hooks['extra_head']() }}
 </head>
 <body>
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell--span-12">
-          <a href="#content" class="sr-only sr-only-focusable">${messages("Skip to main content")}</a>
-          ${header.html_header()}
-        </div>
-      </div>
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell--span-9">
-          <main id="content">
-              <%block name="content"></%block>
-          </main>
-        </div>
-        <div class="mdc-layout-grid__cell--span-3">
-          <a class="twitter-timeline" data-lang="ja" data-height="768" href="https://twitter.com/tesshy?ref_src=twsrc%5Etfw">Tweets by tesshy</a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-      </div>
-      <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell">
-          ${footer.html_footer()}
-        </div>
-      </div>
+    <a href="#content" class="sr-only sr-only-focusable">{{ messages("Skip to main content") }}</a>
+    <div id="container">
+        {{ header.html_header() }}
+        <main id="content">
+            {% block content %}{% endblock %}
+        </main>
+        {{ footer.html_footer() }}
     </div>
-    ${base.late_load_js()}
-    % if date_fanciness != 0:
+    {{ base.late_load_js() }}
+    {% if date_fanciness != 0 %}
     <!-- fancy dates -->
     <script>
-    moment.locale("${momentjs_locales[lang]}");
-    fancydates(${date_fanciness}, ${js_date_format});
+    luxon.Settings.defaultLocale = "{{ luxon_locales[lang] }}";
+    fancydates({{ date_fanciness }}, {{ luxon_date_format }});
     </script>
     <!-- end fancy dates -->
-    % endif
-    <%block name="extra_js"></%block>
+    {% endif %}
+    {% block extra_js %}{% endblock %}
     <script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
-    ${body_end}
-    ${template_hooks['body_end']()}
+    {{ body_end }}
+    {{ template_hooks['body_end']() }}
 </body>
 </html>
