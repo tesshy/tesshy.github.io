@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="tesshy">
+<meta name="dcterms.date" content="2018-09-20">
+<meta name="description" content="MaaSの定義について、今一度考えてみた。">
 
-<title>tesshy.com - Pages</title>
+<title>tesshy.com - MaaSの定義</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/cookie-consent/cookie-consent.js"></script>
 <link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -62,35 +63,6 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6MV2BD0PZ3"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -117,7 +89,6 @@ cookieconsent.run({
 </script> 
   
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -147,7 +118,7 @@ cookieconsent.run({
  <span class="menu-text">Pages</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../posts/index.html" aria-current="page">
+    <a class="nav-link" href="../posts/index.html">
  <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
@@ -165,21 +136,48 @@ cookieconsent.run({
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="CaompingCar">CaompingCar <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Coaster">Coaster <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Gadget">Gadget <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Hack">Hack <span class="quarto-category-count">(2)</span></div><div class="category" data-category="IT">IT <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Starlink">Starlink <span class="quarto-category-count">(3)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#maasの定義" id="toc-maasの定義" class="nav-link active" data-scroll-target="#maasの定義">MaaSの定義</a></li>
+  <li><a href="#x-as-a-serviceの定義" id="toc-x-as-a-serviceの定義" class="nav-link" data-scroll-target="#x-as-a-serviceの定義">X as a Serviceの定義</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pages</h1>
-</div>
+<h1 class="title">MaaSの定義</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MaaS</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    MaaSの定義について、今一度考えてみた。
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>tesshy </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 20, 2018</p>
+    </div>
+  </div>
   
     
   </div>
@@ -187,233 +185,57 @@ cookieconsent.run({
 
 </header>
 
+<p>昨年末あたりから、MaaS(Mobility as a Service)という単語がしきりに聞かれるようになってきた。しかし某が認識していたMaaSの定義とはかけ離れた用いられかたをした例を見かけ、そもそもMaaSの定義とは何なのか、さらにはスマートシティというコンテクストとマッチするのかとても疑問に思えてきたので、ここで一度整理して見直しを行いたいと思った所存。</p>
+<section id="maasの定義" class="level1">
+<h1>MaaSの定義</h1>
+<p>MaaSという単語の定義としてよく用いられるのは、The 1st International Conference on Mobility as a Service (ICoMaaS) にて提唱された以下のものである。</p>
+<blockquote class="blockquote">
+<p>Mobility as a Service (MaaS) is the integration of various forms of transport services into a single mobility service accessible on demand. Mobility as a Service （MaaS）は、オンデマンドでアクセス可能な一つのモビリティサービスとして、様々な輸送形態のサービスを統合したものです。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>To meet a customer’s request, a MaaS operator facilitates a diverse menu of transport options, be they public transport, ride-, car- or bike-sharing, taxi or car rental/lease, or a combination thereof. 顧客の要求を満たすために、MaaSオペレータは公共の交通機関、乗車、自動車、自転車の共有、タクシーまたはレンタカー/リース、またはそれらの組み合わせなど、さまざまな交通手段のメニューを用意しています。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>For the user, MaaS can offer added value through use of a single application to provide access to mobility, with a single payment channel instead of multiple ticketing and payment operations. ユーザーに対して、MaaSは複数の発券および支払い操作の代わりに、単一のアプリケーションを使用して、単一の支払いチャネルでモビリティへのアクセスを提供することによって付加価値を提供できます。</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>For its users, MaaS should be the best value proposition, by helping them meet their mobility needs and solve the inconvenient parts of individual journeys as well as the entire system of mobility services. そのユーザーにとって、MaaSはモビリティサービスの完全なシステムとして、彼らのモビリティニーズを満たし、個々の旅の不便な部分を解決するのを手助けすることで、最高の価値提案がなされるでしょう。</p>
+</blockquote>
+<p>https://maas-alliance.eu/homepage/what-is-maas/</p>
+<p>要は色々な輸送サービスを一つのサービスに統合します、予約・決済も完結しますよ、今までの不便が解消されるので最高でしょ、という意味で解釈している。</p>
+<p>一方、MaaSという言葉を最初に用いたフィンランドMaaSGlobal社では以下のように記述している。</p>
+<blockquote class="blockquote">
+<p>Mobility as a Service brings every kind of transport together into a single intuitive mobile app. Mobility as a Serviceは、あらゆる種類の輸送を1つの直感的なモバイルアプリにまとめたものをもたらします。</p>
+</blockquote>
+<p>このbringsの解釈が英語嫌いマンな某には難解で「アプリです」or「アプリをもたらします」なのがで解釈が若干異なる、が、要は複数輸送サービスを一つにまとめるアプリです、と言っている。</p>
+<p>この二つだけでも何とも言えない差異が感じられるが、もう一つ厄介なのがMaaS Levelというものが定義(Jana, et al.&nbsp;”A Topological Approach to Mobiity as a Service”,　ICoMaaS 2017 Proceedings pp.187-201)され、ここで「Integration Social Goal」というのが新たに出現したことによりスマートシティーにおける立ち位置を明確化しようという流れがある。現状、日本政府内でも共有されている概念である。先のICoMaaSにおける定義をベースとして考えた場合でも、MaaSはスマートシティにおける重要なコンポーネントであることは疑いようがないが、都市計画などをGoalとするレベル定義は従来のMaaSにおけるスコープ外のことであるためいただけないと個人的には感じている。スマートシティを実現するための手段がMaaSであるならば、そこに目的である都市計画、政策を盛り込むな、という話である。</p>
+<p>・・・と思ってよく論文読んでみたら、論文にこんなこと書いてあった。</p>
+<blockquote class="blockquote">
+<p>note that one level is not necessarily ‘better’ than another, as it depends on the customer and his or her needs. あるレベルが他のレベルよりも必ずしも「良い」とは限らないことに注意してください。これは、顧客とそのニーズによって異なります。</p>
+</blockquote>
+<p>この場合、変に階層構造でレベルを振ってしまったのが良くなくて、ある意味でここでのレベルはMaaSを形作るコンポーネントであると捉えるべきである。（Paymentに関して言えば日本におけるSuicaはシングルペイメント手段としてある意味で完成しているにも関わらず、このレベル分類だとランクインすらしないと思われるなど、諸々問題点があると言わざるを得ない。）</p>
+<p>何が言いたいか自分でも良くわからなくなってきたが、箇条書きにすると、</p>
+<ul>
+<li>レベル関係なしにMaaSは実現される</li>
+<li>MaaSはスマートシティ構想の一部を実現する手段</li>
+<li>手段に目的混ぜるな</li>
+</ul>
+<p>ということである。</p>
+</section>
+<section id="x-as-a-serviceの定義" class="level1">
+<h1>X as a Serviceの定義</h1>
+<p>SaaSとかIaaSとか言われるが、IT業界ではこれらをひっくるめてXaaSと呼ばれるそうである。（単語としては知っているが実際に使った現場に遭遇したことはない・・・）</p>
+<blockquote class="blockquote">
+<p>XaaSを利用することで、従来は製品の購入・システムの構築・インフラの敷設などを必要とした高コストのコンピューティング資源を、インターネットを通じて必要な分のみ利用することができる。今日では、XaaSの概念は「クラウドコンピューティング」として扱われることも多い。 https://www.weblio.jp/content/XaaS</p>
+</blockquote>
+<p>よく言われるas a Serviceとは、ライセンスが買い切りモデルからサブスクリプションモデルになった、というのが特徴であると某は考える（要出典）。昨今のMaaS界隈では、自動車が所有からシェアリングへ、要は買い切りからサブスクリプションに変化すると言われる。これならas a Serviceというのはagreeである。</p>
+<p>ただ、鉄道やバス、タクシーにおいては従来よりサブスクリプションモデルである。これが非常に引っかかっており、某がMaaSという単語をあまり使いたくない理由である。同じ考えかどうかはわからないが、アメリカにおいてはMaaSという単語がほとんど見受けられない。その代わりMultimodal Trip Planなどという言い方は良く見かける。</p>
+<p>MaaSとは本当にXaaSなのか。正直バズワード感が現状強いため、使い方には気をつけたいと強く思う。</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="IT,Hack" data-listing-date-sort="1545782400000" data-listing-file-modified-sort="1681610085833" data-listing-reading-time-sort="1.5">
-<div class="thumbnail">
-<a href="../posts/diary/2018-12-26.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="../posts/diary/2018-12-26.html"></a></p>
-</div>
-<div class="body">
-<a href="../posts/diary/2018-12-26.html">
-<h3 class="no-anchor listing-title">
-ANAの機内WiFiで、現在位置を取ってみた
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('IT'); return false;">
-IT
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Hack'); return false;">
-Hack
-</div>
-</div>
-<a href="../posts/diary/2018-12-26.html">
-<div class="listing-description">
-<p>気になるじゃん、今飛んでる位置</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../posts/diary/2018-12-26.html">
-<div class="listing-date">
-Dec 26, 2018
-</div>
-<div class="listing-author">
-tesshy
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Coaster,CaompingCar,Starlink,Gadget" data-listing-date-sort="1665360000000" data-listing-file-modified-sort="1681610085801" data-listing-reading-time-sort="0.01">
-<div class="thumbnail">
-<p><a href="../posts/campingcar/starlink-get.html"> <img src="../posts/campingcar/attachment:image.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/campingcar/starlink-get.html">
-<h3 class="no-anchor listing-title">
-Starlinkが、やってきた！
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Coaster'); return false;">
-Coaster
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('CaompingCar'); return false;">
-CaompingCar
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Starlink'); return false;">
-Starlink
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Gadget'); return false;">
-Gadget
-</div>
-</div>
-<a href="../posts/campingcar/starlink-get.html">
-<div class="listing-description">
-<p>Starlinkが、やってきた！！</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../posts/campingcar/starlink-get.html">
-<div class="listing-date">
-Oct 10, 2022
-</div>
-<div class="listing-author">
-tesshy
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Coaster,CaompingCar,Starlink,Gadget" data-listing-date-sort="1665792000000" data-listing-file-modified-sort="1681610085673" data-listing-reading-time-sort="0.005">
-<div class="thumbnail">
-<a href="../posts/campingcar/starlink-cable.html">
-<div class="thumbnail-image">
-
-</div>
-</a><p><a href="../posts/campingcar/starlink-cable.html"></a></p>
-</div>
-<div class="body">
-<a href="../posts/campingcar/starlink-cable.html">
-<h3 class="no-anchor listing-title">
-Starlinkのケーブルをなんとかしてみた
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Coaster'); return false;">
-Coaster
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('CaompingCar'); return false;">
-CaompingCar
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Starlink'); return false;">
-Starlink
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Gadget'); return false;">
-Gadget
-</div>
-</div>
-<a href="../posts/campingcar/starlink-cable.html">
-<div class="listing-description">
-<p>Starlinkのケーブル、長いんじゃ！</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../posts/campingcar/starlink-cable.html">
-<div class="listing-date">
-Oct 15, 2022
-</div>
-<div class="listing-author">
-tesshy
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Coaster,CaompingCar,Starlink,Gadget" data-listing-date-sort="1665014400000" data-listing-file-modified-sort="1681610085833" data-listing-reading-time-sort="0.02">
-<div class="thumbnail">
-<p><a href="../posts/campingcar/starlink-order.html"> <img src="../posts/campingcar/attachment:image.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/campingcar/starlink-order.html">
-<h3 class="no-anchor listing-title">
-Starlinkを、注文してみた
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Coaster'); return false;">
-Coaster
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('CaompingCar'); return false;">
-CaompingCar
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Starlink'); return false;">
-Starlink
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Gadget'); return false;">
-Gadget
-</div>
-</div>
-<a href="../posts/campingcar/starlink-order.html">
-<div class="listing-description">
-<p>Starlinkが、やってくる？</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../posts/campingcar/starlink-order.html">
-<div class="listing-date">
-Oct 6, 2022
-</div>
-<div class="listing-author">
-tesshy
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="IT,Hack" data-listing-date-sort="1548720000000" data-listing-file-modified-sort="1681610085833" data-listing-reading-time-sort="0.025">
-<div class="thumbnail">
-<p><a href="../posts/diary/2019-01-29.html"> <img src="../posts/diary/attachment:le-logo-standard.png" class="thumnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="../posts/diary/2019-01-29.html">
-<h3 class="no-anchor listing-title">
-ロリポップサーバーで独自SSL証明書を使う方法
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('IT'); return false;">
-IT
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Hack'); return false;">
-Hack
-</div>
-</div>
-<a href="../posts/diary/2019-01-29.html">
-<div class="listing-description">
-<p>毎度忘れるねん、これ。</p>
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="../posts/diary/2019-01-29.html">
-<div class="listing-date">
-Jan 29, 2019
-</div>
-<div class="listing-author">
-tesshy
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

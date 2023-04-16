@@ -32,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-author","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -89,6 +91,31 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6MV2BD0PZ3"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-6MV2BD0PZ3', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
 
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
@@ -123,6 +150,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../posts/index.html">
  <span class="menu-text">Posts</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -135,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="CaompingCar">CaompingCar <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Coaster">Coaster <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Gadget">Gadget <span class="quarto-category-count">(1)</span></div><div class="category" data-category="MaaS">MaaS <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -162,18 +193,84 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1681606279705" data-listing-reading-time-sort="2.775">
+<div class="quarto-post image-right" data-index="0" data-categories="Coaster,CaompingCar,Gadget" data-listing-date-sort="1532044800000" data-listing-file-modified-sort="1681610085605" data-listing-reading-time-sort="0.605">
+<div class="thumbnail">
+<p><a href="../pages/comparison.html"> <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sb27f2fd3de68ef13/image/ide7d8b0d01f31b9e/version/1474613279/image.jpg" class="thumnail-image"> </a></p>
+</div>
 <div class="body">
-<a href="../pages/profile.html">
+<a href="../pages/comparison.html">
+<h3 class="no-anchor listing-title">
+キャンピングカーを、考える
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Coaster'); return false;">
+Coaster
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('CaompingCar'); return false;">
+CaompingCar
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Gadget'); return false;">
+Gadget
+</div>
+</div>
+<a href="../pages/comparison.html">
 <div class="listing-description">
-
-祝 バス納車！
-
+<p>コースターを、買ってみた</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="../pages/profile.html"> </a>
+<a href="../pages/comparison.html">
+<div class="listing-date">
+Jul 20, 2018
+</div>
+<div class="listing-author">
+tesshy
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="MaaS" data-listing-date-sort="1537401600000" data-listing-file-modified-sort="1681610085605" data-listing-reading-time-sort="1.09">
+<div class="thumbnail">
+<a href="../pages/what-is-the-definition-of-the-maas.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="../pages/what-is-the-definition-of-the-maas.html"></a></p>
+</div>
+<div class="body">
+<a href="../pages/what-is-the-definition-of-the-maas.html">
+<h3 class="no-anchor listing-title">
+MaaSの定義
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('MaaS'); return false;">
+MaaS
+</div>
+</div>
+<a href="../pages/what-is-the-definition-of-the-maas.html">
+<div class="listing-description">
+<p>MaaSの定義について、今一度考えてみた。</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../pages/what-is-the-definition-of-the-maas.html">
+<div class="listing-date">
+Sep 20, 2018
+</div>
+<div class="listing-author">
+tesshy
+</div>
+</a>
 </div>
 </div>
 </div>
@@ -315,6 +412,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+  </div>
+</footer>
 
 
 
