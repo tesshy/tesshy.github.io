@@ -1,9 +1,10 @@
 project:
   type: website
   output-dir: docs
-  # render:
-  #   - pages/
-  #   - posts/
+  render:
+    - "*.qmd"
+    - "*.ipynb"
+    - "!posts/_unorganized/"
   preview:
     port: 4200
     browser: false
@@ -18,7 +19,11 @@ website:
   repo-url: "https://github.com/tesshy/tesshy.github.io"
   repo-branch: main
   # issue-url: "https://github.com/tesshy/tesshy.github.io/issues"
-
+  cookie-consent: 
+    type: express
+    style: simple
+  google-analytics:
+    tracking-id: "G-6MV2BD0PZ3"
   navbar:
     search: true
     left:
@@ -28,6 +33,12 @@ website:
         text: Pages
       - href: posts/index.qmd
         text: Posts
+      - href: about.ipynb
+        text: About
+
+theme:
+  light: flatly
+  dark: darkly
 
 format:
   html:
