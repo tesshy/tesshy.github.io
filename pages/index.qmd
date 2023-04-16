@@ -3,10 +3,10 @@ title: "Pages"
 listing:
   type: default
   categories: true
-  sort:
-    - "date"
-    - "title desc"
+  sort: "date desc"
   contents:
     - "*.qmd"
     - "*.ipynb"
+  date-format: iso
+  fields: [date, title, author, description]
 ---

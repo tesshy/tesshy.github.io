@@ -3,8 +3,10 @@ title: "Index"
 listing:
   type: default
   categories: true
-  sort: "date asc"
+  sort: "date desc"
   contents:
     - "posts"
+  date-format: iso
+  fields: [date, title, author, description]
 ---
 
