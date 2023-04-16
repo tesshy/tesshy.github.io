@@ -1,0 +1,12 @@
+---
+title: "Pages"
+listing:
+  type: default
+  categories: true
+  sort:
+    - "date"
+    - "title desc"
+  contents:
+    - "*.qmd"
+    - "*.ipynb"
+---

@@ -1,0 +1,9 @@
+---
+title: "Pages"
+listing:
+  type: default
+  categories: true
+  contents:
+    - "*.qmd"
+    - "*.ipynb"
+---

@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: _site
+  # render:
+  #   - pages/
+  #   - posts/
+  preview:
+    port: 4200
+    browser: false
+
+execute:
+  cache: true
+  freeze: auto
+
+website:
+  title: "tesshy.com"
+  site-url: "https://www.tesshy.com/"
+  repo-url: "https://github.com/tesshy/tesshy.github.io"
+  repo-branch: main
+  # issue-url: "https://github.com/tesshy/tesshy.github.io/issues"
+
+  navbar:
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: pages/index.qmd
+        text: Pages
+      - href: posts/index.qmd
+        text: Posts
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+
