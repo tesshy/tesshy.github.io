@@ -1,0 +1,30 @@
+[
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/essay/what-is-the-definition-of-the-maas.html",
+      "/posts/essay/PyCon2022_LightningTalk.html",
+      "/posts/campingcar/comparison.html",
+      "/posts/campingcar/2018-07-22.html",
+      "/posts/campingcar/2018-07-23.html",
+      "/posts/campingcar/2018-07-24.html",
+      "/posts/campingcar/2018-07-25.html",
+      "/posts/campingcar/2018-07-26.html",
+      "/posts/campingcar/2018-07-30.html",
+      "/posts/campingcar/2019-04-14.html",
+      "/posts/campingcar/2019-07-21.html",
+      "/posts/campingcar/starlink-cable.html",
+      "/posts/campingcar/starlink-get.html",
+      "/posts/campingcar/starlink-order.html",
+      "/posts/diary/2018-12-26.html",
+      "/posts/diary/2019-01-29.html",
+      "/posts/template.html"
+    ]
+  },
+  {
+    "listing": "/pages/index.html",
+    "items": [
+      "/pages/profile.html"
+    ]
+  }
+]
