@@ -1,20 +1,21 @@
 [
   {
-    "listing": "/pages/index.html",
-    "items": [
-      "/pages/what-is-the-definition-of-the-maas.html",
-      "/pages/comparison.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
+      "/posts/it/MSOffice_SharingLicenceError.html",
       "/posts/diary/2023-08-07.html",
       "/posts/campingcar/starlink-cable.html",
       "/posts/campingcar/starlink-get.html",
       "/posts/campingcar/starlink-order.html",
       "/posts/diary/2019-01-29.html",
       "/posts/diary/2018-12-26.html"
+    ]
+  },
+  {
+    "listing": "/pages/index.html",
+    "items": [
+      "/pages/what-is-the-definition-of-the-maas.html",
+      "/pages/comparison.html"
     ]
   }
 ]

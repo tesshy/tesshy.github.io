@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="tesshy">
-<meta name="dcterms.date" content="2019-01-29">
-<meta name="description" content="毎度忘れるねん、これ。">
+<meta name="dcterms.date" content="2023-08-08">
+<meta name="description" content="しらんがな感">
 
-<title>tesshy.com - ロリポップサーバーで独自SSL証明書を使う方法</title>
+<title>tesshy.com - Microsoft Officeアプリを起動すると、アカウントの問題、共有コンピューターでのOfficeライセンス認証に使用することはできません、と怒られる</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -146,16 +146,16 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ロリポップサーバーで独自SSL証明書を使う方法</h1>
+<h1 class="title">Microsoft Officeアプリを起動すると、アカウントの問題、共有コンピューターでのOfficeライセンス認証に使用することはできません、と怒られる</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">IT</div>
-    <div class="quarto-category">Hack</div>
+    <div class="quarto-category">office</div>
+    <div class="quarto-category">windows</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    毎度忘れるねん、これ。
+    しらんがな感
   </div>
 </div>
 
@@ -172,7 +172,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 29, 2019</p>
+      <p class="date">August 8, 2023</p>
     </div>
   </div>
   
@@ -182,24 +182,16 @@ cookieconsent.run({
 
 </header>
 
-<p>これがわからんかった、ロリポップサーバーで独自SSL証明書使う方法。</p>
-<p>公式ドキュメントは以下のように記載がある。</p>
-<pre><code>・他社ドメイン管理サービスで管理されている独自ドメインは、ネームサーバー情報として下記をご設定ください。
-　uns01.lolipop.jp
-　uns02.lolipop.jp
- 
-https://lolipop.jp/support/faq/ssl/000797/</code></pre>
-<p>んなアホな、レコード設定もできないNS（ネームサーバー）向けろとか無理やろ。。。と思って、最初の設定の時だけ　uns01.lolipop.jp 　uns02.lolipop.jp をNSに設定して、独自SSL設定できたら本来使いたいNSに戻すというのをしてたんだが、これだとLet’s Encryptの有効期限（多分三ヶ月）過ぎると証明書自動更新できなくて死ぬ（SSL証明書検証エラーになる）。</p>
-<p>だが、どうもロリポのNS使ってないサーバーでも更新できているサーバーがいる。この違いはなんだ・・・と思って調べたら、どうも@に対してAレコードでロリポのサーバー向ければいいっぽい。（サブドメインじゃなくて、ドメインに対してのAレコードをロリポのサーバーにする）</p>
-<p>具体的にはこんな感じ。</p>
-<pre><code>tesshy.com.     3599    IN  A   157.7.107.129</code></pre>
-<p>これで自動更新までできることを確認。めでたしめでたし。（どうもサポート外の使い方っぽいのでご利用は計画的に・・・）</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="2019-01-29_files/figure-html/1650e998-1-le-logo-standard.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">le-logo-standard.png</figcaption>
+<p><img src="MSOffice_SharingLicenceError_files/figure-html/1941d99b-1-image.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">image.png</figcaption>
 </figure>
 </div>
+<p>こんな表示が出る。もちらん共有なんぞしてない。そんな時は以下をdisable_OfficeSharedComputer.regとして保存して実行してどうぞ・・・（無保証、ただ自分の周りで使ってる限り失敗したことはない）</p>
+<pre><code>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration]
+"SharedComputerLicensing"="0"</code></pre>
+<p>正直原因がわからないが、なんかの拍子にSharedComputerLicensingが1になってしまうらしい。再現性がないのでよくわからん・・・。ワイがOfficeのライセンスについてなんか間違って認識してる可能性も否めない、が・・・。</p>
 
 
 
