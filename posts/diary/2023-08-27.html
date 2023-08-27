@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="tesshy">
-<meta name="dcterms.date" content="2023-08-08">
-<meta name="description" content="しらんがな感">
+<meta name="dcterms.date" content="2023-08-27">
+<meta name="description" content="LRTに乗ったきた">
 
-<title>tesshy.com - Microsoft Officeアプリを起動すると、アカウントの問題、共有コンピューターでのOfficeライセンス認証に使用することはできません、と怒られる</title>
+<title>tesshy.com - ライトライン： 宇都宮LRTに乗ってきた</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -146,16 +146,15 @@ cookieconsent.run({
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Microsoft Officeアプリを起動すると、アカウントの問題、共有コンピューターでのOfficeライセンス認証に使用することはできません、と怒られる</h1>
+<h1 class="title">ライトライン： 宇都宮LRTに乗ってきた</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">office</div>
-    <div class="quarto-category">windows</div>
+    <div class="quarto-category">Diary</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    しらんがな感
+    LRTに乗ったきた
   </div>
 </div>
 
@@ -172,7 +171,7 @@ cookieconsent.run({
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 8, 2023</p>
+      <p class="date">August 27, 2023</p>
     </div>
   </div>
   
@@ -182,16 +181,47 @@ cookieconsent.run({
 
 </header>
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="MSOffice_SharingLicenceError_files/figure-html/1ffc6303-1-image.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">image.png</figcaption>
-</figure>
-</div>
-<p>こんな表示が出る。もちらん共有なんぞしてない。そんな時は以下をdisable_OfficeSharedComputer.regとして保存して実行してどうぞ・・・（無保証、ただ自分の周りで使ってる限り失敗したことはない）</p>
-<pre><code>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration]
-"SharedComputerLicensing"="0"</code></pre>
-<p>正直原因がわからないが、なんかの拍子にSharedComputerLicensingが1になってしまうらしい。再現性がないのでよくわからん・・・。ワイがOfficeのライセンスについてなんか間違って認識してる可能性も否めない、が・・・。</p>
+<p>宇都宮LRT（ライトライン）乗ってきたので徒然草</p>
+<ul>
+<li>車両大変よろしい、3両編成の路面電車って初めて乗った（国内唯一だっけ？）、輸送力は大変強い
+<ul>
+<li>帰りの便でクソミソに並んでたけど、1編成でこんな捌けんのかと思った。やっぱ鉄路強い</li>
+<li>弱点として、加速とか停車とかスムーズなんだけど、これが逆に変にぬるぬる感じられてうちの家族俺以外みんな酔ってた。。。（僕もこれは酔うわ、と思った。）</li>
+</ul></li>
+<li>信用乗車方式大変よろしい、しかしあれはそのうち問題出てくるのでどう捌くのか注目
+<ul>
+<li>キセルというか無賃乗車が絶対出る、それがどれだけ今後影響してくるか</li>
+</ul></li>
+<li>乗車と降車のリーダー・ライターが別々なのはUXデザイン的にあんま良くない気がする
+<ul>
+<li>仕組み的にあれ1台でもできるよね？？と思った</li>
+</ul></li>
+<li>現金取扱はやめるべき
+<ul>
+<li>運転席後ろの運賃箱でしかできないのでイベント時とかにクソ詰まる</li>
+<li>開業当初の混雑・遅延の原因はほぼこれが原因だと思われる</li>
+<li>電停でしか整理券受取できないのが初見殺し、さらにいうとあの機械の維持管理も結構コスト高いと思った</li>
+<li>やっぱオープンループ対応欲しい、そうすればVISAデビットとかでも払えるわけで</li>
+</ul></li>
+<li>パークアンドライド、もうちょっと頑張ってもよくない？？
+<ul>
+<li>駐車場備えた電停が数箇所あるが、駐車場ちっさい・・・</li>
+<li>田んぼの真ん中とか工業団地とかもっとデデーンと駐車場作ってもよくない？？</li>
+<li>うちのバスが置けない（クソデカため息）</li>
+</ul></li>
+<li>フィーダー交通はこれからですね（僕が観測した限り、誰も乗ってなかった・・・・）
+<ul>
+<li>案内がまだまだ不足してる</li>
+<li>どこからどこに行けるのか今日行った限りではマジでなんもわからんかった（わざと調べずに行ったんだけど・・・）</li>
+</ul></li>
+<li>GTFS-RTはよ
+<ul>
+<li>システムも新しいし、遅延極小なGTFS-RTに期待したい（これは過去散々苦労したネタ、大変なのは血反吐吐くほどよくわかってるつもり・・・）</li>
+</ul></li>
+</ul>
+<p>正直、宇都宮駅の東側ってあんまよく知らない・行かない地域なんです僕的には。 だからこそ思ったのが、通勤通学には使われそうだが日常生活やレジャーで使われそうな雰囲気が現状感じられなかった点。 富山や熊本とかなり毛色が違う路面電車だな、というのが現在の感想。何が、までは真面目に考えてない。。。</p>
+<p>しかし紆余曲折ありましたが、やはり新しい交通システムが入ると街は変わりますね。率直に今後重要な生活インフラになっていって欲しいと思った次第。</p>
+<p><img src="2023-08-27_files/figure-html/a14830a8-1-image-2.png" class="img-fluid" alt="image-2.png"> <img src="2023-08-27_files/figure-html/a14830a8-3-image-4.png" class="img-fluid" alt="image-4.png"> <img src="2023-08-27_files/figure-html/a14830a8-4-image.png" class="img-fluid" alt="image.png"> <img src="2023-08-27_files/figure-html/a14830a8-2-image-3.png" class="img-fluid" alt="image-3.png"></p>
 
 
 
