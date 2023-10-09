@@ -184,12 +184,15 @@ cookieconsent.run({
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="MSOffice_SharingLicenceError_files/figure-html/1ffc6303-1-image.png" class="img-fluid figure-img"></p>
+<p><img src="MSOffice_SharingLicenceError_files/figure-html/2b966aec-1-image.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">image.png</figcaption>
 </figure>
 </div>
 <p>こんな表示が出る。もちらん共有なんぞしてない。そんな時は以下をdisable_OfficeSharedComputer.regとして保存して実行してどうぞ・・・（無保証、ただ自分の周りで使ってる限り失敗したことはない）</p>
-<pre><code>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration]
+<p>2023-10-09: 先頭行のレジストリバージョン宣言が抜けてたので追加・・・</p>
+<pre><code>Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration]
 "SharedComputerLicensing"="0"</code></pre>
 <p>正直原因がわからないが、なんかの拍子にSharedComputerLicensingが1になってしまうらしい。再現性がないのでよくわからん・・・。ワイがOfficeのライセンスについてなんか間違って認識してる可能性も否めない、が・・・。</p>
 
